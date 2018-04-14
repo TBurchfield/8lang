@@ -35,3 +35,4 @@ However, for this purpose I think we will count a nonzero return value as accept
 ## Todo
   - [ ] Organize code into modules more
   - [ ] Implement `T`, or similar
+  - [ ] Make a compiler(?)
