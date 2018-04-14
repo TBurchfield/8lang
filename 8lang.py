@@ -190,4 +190,7 @@ if __name__=='__main__':
     program_text[i] = program_text[i].ljust(max_len, ' ')
     i += 1
   s = Program(program_text)
-  print('Return: {}'.format(s.process()))
+  ret = s.process()
+  if verbose:
+    print('Return: {}'.format(ret))
+  exit(ret)

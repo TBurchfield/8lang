@@ -13,7 +13,7 @@ The source code, a normal ascii file, is treated like a 2 dimensional array of c
 
   - **Steps**: each thread is moved/advanced in its direction, then the command underneath it is interpreted.  Any newly created threads are not advanced the step they are created.
 
-  - **Halting**: The program halts when any program exits the program, with the value of the program.  If multiple threads exit in one step, don't rely on that.  *Note*, the program is right padded by spaces on the lines that are shorter than the longest line, to make source a little more manageable.
+  - **Halting**: The program halts when any program exits the program, with the value of the exiting thread.  If multiple threads exit in one step, don't rely on that.  *Note*, the program is right padded by spaces on the lines that are shorter than the longest line, to make source a little more manageable.
 
   - **Commands** are as follows:
     - All of `\/_|` change the direction of the thread in the way that light would reflect off that angled surface.
