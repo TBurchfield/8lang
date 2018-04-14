@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 import sys
+import getopt
 import time
+verbose=False
 UP = 0
 DOWN = 1
 LEFT = 2
@@ -28,7 +30,8 @@ class Program():
   def process(self):
     step_threads(self.program, self.state)
     while not self.state.end:
-      #show_state(self.program, self.state)
+      if verbose:
+        show_state(self.program, self.state)
       step_threads(self.program, self.state)
     return self.state.acc
 
@@ -169,9 +172,15 @@ def step_thread(program, thread, state):
 
 if __name__=='__main__':
   program_text = []
-  if len(sys.argv) != 2:
+  optlist, args = getopt.getopt(sys.argv[1:], 'hv')
+  for opt, a in optlist:
+    if opt == '-v':
+      verbose = True
+    if opt == '-h':
+      usage(0)
+  if len(args) != 1:
     usage(1)
-  filename = sys.argv[1]
+  filename = args[0]
   max_len = 0
   for line in open(filename, 'r'):
     program_text.append(line.rstrip())
