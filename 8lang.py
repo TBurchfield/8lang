@@ -38,6 +38,12 @@ class State():
     self.acc = False
     self.threads = set([Thread(0,0,RIGHT, 0)])
 
+def usage(rc):
+  print("Usage:")
+  print("{} <filename>".format(sys.argv[0]))
+  print("where <filename> is an 8lang source file.")
+  exit(rc)
+
 def show_state(program, state):
   out = [line for line in program]
   for thread in state.threads:
@@ -163,8 +169,9 @@ def step_thread(program, thread, state):
 
 if __name__=='__main__':
   program_text = []
-  if len(sys.argv) == 2:
-    filename = sys.argv[1]
+  if len(sys.argv) != 2:
+    usage(1)
+  filename = sys.argv[1]
   max_len = 0
   for line in open(filename, 'r'):
     program_text.append(line.rstrip())
