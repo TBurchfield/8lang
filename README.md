@@ -28,6 +28,6 @@ The source code, a normal ascii file, is treated like a 2 dimensional array of c
     - `T` *is not yet implemented*, but will likely facilitate interactions between threads.
 
 ## Theory
-I am not yet sure what class of languages 8lang recognizes.  Me and [https://github.com/JohnathonNow](Jeffrey) were talking about this.  It seems without the `T` command, nothing more than regular languages can be recognized.  With `T` we aren't sure, but it doesn't seem turing complete.  I'll try and update this if I find more on this.
+I am not yet sure what class of languages 8lang recognizes.  Me and [Jeffrey](https://github.com/JohnathonNow) were talking about this.  It seems without the `T` command, nothing more than regular languages can be recognized.  With `T` we aren't sure, but it doesn't seem turing complete.  I'll try and update this if I find more on this.
 
 However, for this purpose I think we will count a nonzero return value as accepting, and zero as rejecting.
