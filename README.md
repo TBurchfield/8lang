@@ -31,3 +31,7 @@ The source code, a normal ascii file, is treated like a 2 dimensional array of c
 I am not yet sure what class of languages 8lang recognizes.  [Jeffrey](https://github.com/JohnathonNow) and I were talking about this.  It seems without the `T` command, nothing more than regular languages can be recognized.  With `T` we aren't sure, but it doesn't seem turing complete.  I'll try and update this if I find more on this.
 
 However, for this purpose I think we will count a nonzero return value as accepting, and zero as rejecting.
+
+## Todo
+  - [ ] Organize code into modules more
+  - [ ] Implement `T`, or similar
